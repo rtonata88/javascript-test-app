@@ -1,6 +1,7 @@
 const stringLength = require("./stringLength");
 const reverseString = require("./reverse-string");
 const Calculator = require("./calculator");
+const capitalizeString = require("./capitalize");
 
 describe("String Length Tests", () => {
   test("stringLength", () => {
@@ -25,6 +26,7 @@ describe("Reverse strings tests", () => {
 describe("Calculator operations", () => {
   const numbers = [10, 2];
   let calc = new Calculator(numbers);
+
   test("addition", () => {
     expect(calc.add()).toBe(12);
   });
@@ -39,5 +41,11 @@ describe("Calculator operations", () => {
 
   test("division", () => {
     expect(calc.divide()).toBe(5);
+  });
+});
+
+describe("Capitalize string tests", () => {
+  test("CapitalizeString", () => {
+    expect(capitalizeString("Richard")).toBe("RICHARD");
   });
 });
